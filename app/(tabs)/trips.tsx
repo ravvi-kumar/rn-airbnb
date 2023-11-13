@@ -1,7 +1,7 @@
 import { View, Text } from "react-native";
 import React from "react";
 
-const trips = () => {
+const Page = () => {
   return (
     <View>
       <Text>trips</Text>
@@ -9,4 +9,4 @@ const trips = () => {
   );
 };
 
-export default trips;
+export default Page;

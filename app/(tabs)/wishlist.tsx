@@ -1,7 +1,7 @@
 import { View, Text } from "react-native";
 import React from "react";
 
-const wishlist = () => {
+const Page = () => {
   return (
     <View>
       <Text>wishlist</Text>
@@ -9,4 +9,4 @@ const wishlist = () => {
   );
 };
 
-export default wishlist;
+export default Page;

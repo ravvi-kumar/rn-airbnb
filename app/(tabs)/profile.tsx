@@ -1,12 +1,22 @@
-import { View, Text } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
+import { useAuth } from "@clerk/clerk-expo";
+import { Link } from "expo-router";
 
-const profile = () => {
+const Page = () => {
+  const { isSignedIn, signOut } = useAuth();
   return (
     <View>
-      <Text>profile</Text>
+      <TouchableOpacity onPress={() => signOut()}>
+        <Text>Log Out</Text>
+      </TouchableOpacity>
+      {!isSignedIn && (
+        <Link href={"/(modals)/login"}>
+          <Text>Login</Text>
+        </Link>
+      )}
     </View>
   );
 };
 
-export default profile;
+export default Page;
